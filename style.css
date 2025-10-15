@@ -1,5 +1,5 @@
 /* ---
-GUINACOIN AI - STYLESHEET V4.0 (Refined)
+GUINACOIN AI - STYLESHEET V4.1 (Performance Refined)
 DESIGNER: Gemini AI
 DATE: 15/10/2025
 --- */
@@ -22,7 +22,7 @@ DATE: 15/10/2025
     --font-body: 'Space Grotesk', sans-serif;
     --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.2);
     --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.4);
-    --animation-curve-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* MODIFICADO: Curva de animação mais suave */
+    --animation-curve-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 * {
@@ -66,7 +66,7 @@ body {
 .glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(120px); /* Aumentado o blur para mais suavidade */
+    filter: blur(120px);
 }
 
 .glow1 { width: 600px; height: 600px; background: var(--glow-color-1); top: 10%; left: 10%; }
@@ -85,7 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%; /* Padding ajustado para a logo maior */
+    padding: 1.5rem 5%;
     position: fixed;
     width: 100%;
     top: 0;
@@ -97,16 +97,16 @@ body {
 }
 
 .logo img {
-    height: 50px; /* MODIFICADO: Altura base para o layout */
+    height: 50px;
     width: auto;
     border-radius: var(--border-radius-medium);
-    transform: scale(1.4); /* MODIFICADO: Aumenta o tamanho visual sem quebrar o layout */
-    transform-origin: left center; /* Garante que ela cresça a partir da esquerda */
-    transition: transform 0.4s var(--animation-curve-smooth); /* MODIFICADO: Animação mais suave */
+    transform: scale(1.4);
+    transform-origin: left center;
+    transition: transform 0.4s var(--animation-curve-smooth);
 }
 
 .logo img:hover {
-    transform: scale(1.5) rotate(-3deg); /* MODIFICADO: Efeito de hover mais sutil */
+    transform: scale(1.5) rotate(-3deg);
 }
 
 .desktop-nav { display: none; }
@@ -130,12 +130,12 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem;
-    transition: right 0.6s var(--animation-curve-smooth); /* MODIFICADO: Curva suave */
+    transition: right 0.6s var(--animation-curve-smooth);
 }
 
 .sidebar.open { right: 0; }
 .sidebar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; }
-.sidebar .logo img { height: 50px; transform: scale(1.2); transform-origin: left center; } /* MODIFICADO: Logo da sidebar */
+.sidebar .logo img { height: 50px; transform: scale(1.2); transform-origin: left center; }
 .close-sidebar { background: transparent; border: none; cursor: pointer; color: var(--heading-color); padding: 0.5rem; }
 .sidebar nav ul { list-style: none; display: flex; flex-direction: column; gap: 2.5rem; }
 .sidebar nav a { text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 1.8rem; font-family: var(--font-heading); display: block; transition: color 0.3s ease, transform 0.3s ease; }
@@ -149,24 +149,24 @@ body {
 main { isolation: isolate; }
 section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 120px 5%; text-align: center; position: relative; overflow: hidden; }
 .container { max-width: 1200px; width: 100%; margin: 0 auto; }
-h1, h2, h3 { font-family: var(--font-heading); color: var(--heading-color); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; } /* MODIFICADO: Espaçamento do título diminuído */
+h1, h2, h3 { font-family: var(--font-heading); color: var(--heading-color); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
 h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 5vw, 3.2rem); }
 h3 { font-size: clamp(1.2rem, 3vw, 1.5rem); }
 p { line-height: 1.7; max-width: 650px; margin: 0 auto 2rem auto; }
-.subtitle { font-size: 1.25rem; color: var(--text-color); margin-bottom: 3.5rem; } /* MODIFICADO: Espaçamento do subtítulo diminuído */
+.subtitle { font-size: 1.25rem; color: var(--text-color); margin-bottom: 3.5rem; }
 .gradient-text { background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
 
 /* --- 7. BUTTONS & LINKS --- */
 .cta-button { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--heading-color); padding: 1.2rem 2.5rem; border-radius: var(--border-radius-large); text-decoration: none; font-size: 1.1rem; font-weight: 500; font-family: var(--font-heading); cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; box-shadow: var(--shadow-light); }
 .cta-button::before { content: ''; position: absolute; top: 50%; left: 50%; width: 0; height: 0; background: rgba(255, 255, 255, 0.1); border-radius: 50%; transform: translate(-50%, -50%); transition: width 0.4s, height 0.4s; z-index: -1; }
-.cta-button:hover { transform: translateY(-3px); /* MODIFICADO: Movimento mais sutil */ box-shadow: 0 0 25px var(--glow-color-1); border-color: rgba(255, 255, 255, 0.3); }
+.cta-button:hover { transform: translateY(-3px); box-shadow: 0 0 25px var(--glow-color-1); border-color: rgba(255, 255, 255, 0.3); }
 .cta-button:hover::before { width: 200%; height: 200%; }
 .link-styled { display: inline-block; color: var(--heading-color); text-decoration: none; font-weight: 500; margin-top: 1.5rem; transition: transform 0.3s ease; }
 .link-styled:hover { background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-fill-color: transparent; transform: translateX(5px); }
 
 /* --- 8. SECTION-SPECIFIC STYLES --- */
-#inicio p { font-size: 1.2rem; margin-bottom: 2.5rem; } /* MODIFICADO: Espaçamento diminuído */
+#inicio p { font-size: 1.2rem; margin-bottom: 2.5rem; }
 .cards-container { display: grid; grid-template-columns: 1fr; gap: 2rem; }
 .card { background: rgba(38, 37, 67, 0.3); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: var(--border-radius-large); text-align: left; backdrop-filter: blur(10px); box-shadow: var(--shadow-medium); transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
 .card:hover { transform: translateY(-8px); box-shadow: 0 0 40px var(--glow-color-2); border-color: rgba(255, 255, 255, 0.3); }
@@ -197,17 +197,17 @@ p { line-height: 1.7; max-width: 650px; margin: 0 auto 2rem auto; }
 .social-links a { color: var(--text-color); transition: color 0.3s, transform 0.3s; }
 .social-links a:hover { color: var(--heading-color); transform: scale(1.2); }
 
-/* --- 9. ON-SCROLL ANIMATIONS --- */
+/* --- 9. ON-SCROLL ANIMATIONS (PERFORMANCE OPTIMIZED) --- */
 .animate-on-scroll {
     opacity: 0;
-    filter: blur(5px); /* MODIFICADO: Adiciona blur para suavidade */
-    transform: translateY(20px); /* MODIFICADO: Diminui a distância */
-    transition: opacity 1s var(--animation-curve-smooth), transform 1s var(--animation-curve-smooth), filter 1s var(--animation-curve-smooth); /* MODIFICADO: Animação mais longa e suave */
+    /* filter: blur(5px); <-- REMOVIDO PARA PERFORMANCE */
+    transform: translateY(20px);
+    transition: opacity 0.8s var(--animation-curve-smooth), transform 0.8s var(--animation-curve-smooth); /* MODIFICADO: Animação mais leve sem o 'filter' */
 }
 
 .animate-on-scroll.visible {
     opacity: 1;
-    filter: blur(0);
+    /* filter: blur(0); <-- REMOVIDO PARA PERFORMANCE */
     transform: translateY(0);
 }
 
@@ -230,8 +230,8 @@ p { line-height: 1.7; max-width: 650px; margin: 0 auto 2rem auto; }
     .sidebar { width: 350px; }
 
     .logo img {
-        height: 60px; /* MODIFICADO: Altura base para desktop */
-        transform: scale(1.5); /* MODIFICADO: Aumenta o tamanho visual no desktop */
+        height: 60px;
+        transform: scale(1.5);
     }
 
     .cards-container { grid-template-columns: repeat(3, 1fr); }
